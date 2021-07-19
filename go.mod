@@ -1,4 +1,4 @@
-module github.com/hiroygo/starting-grpc/api
+module github.com/hiroygo/starting-grpc
 
 go 1.16
 

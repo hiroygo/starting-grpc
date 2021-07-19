@@ -8,7 +8,7 @@ https://github.com/gami/grpc_example
 ```
 $ sudo apt install -y protobuf-compiler
 $ go get -u github.com/golang/protobuf/protoc-gen-go
-$ protoc -Iproto --go_out=plugins=grpc:server/api --go_opt=module=github.com/hiroygo/starting-grpc/server/api proto/*.proto
+$ protoc -Iproto --go_out=plugins=grpc:api --go_opt=module=github.com/hiroygo/starting-grpc/api proto/*.proto
 ```
 
 ## grpc_cli のビルド
