@@ -12,7 +12,7 @@ import (
 
 func bake(c api.PancakeBakerServiceClient, m api.Pancake_Menu) (*api.BakeResponse, error) {
 	req := &api.BakeRequest{Menu: m}
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second*1)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 
 	resp, err := c.Bake(ctx, req)
@@ -25,7 +25,7 @@ func bake(c api.PancakeBakerServiceClient, m api.Pancake_Menu) (*api.BakeRespons
 
 func report(c api.PancakeBakerServiceClient) (*api.ReportResponse, error) {
 	req := &api.ReportRequest{}
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second*1)
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 
 	resp, err := c.Report(ctx, req)
