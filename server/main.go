@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net"
 	"os"
@@ -14,8 +13,8 @@ import (
 )
 
 func main() {
-	port := 50051
-	l, err := net.Listen("tcp", fmt.Sprintf(":%d", port))
+	addr := ":50051"
+	l, err := net.Listen("tcp", addr)
 	if err != nil {
 		log.Fatalf("Listen error: %s", err)
 	}
@@ -26,7 +25,7 @@ func main() {
 	// grpc_cli を使う時に必要
 	reflection.Register(sv)
 	go func() {
-		log.Printf("starting gRPC server: %d\n", port)
+		log.Printf("starting gRPC server: %q\n", addr)
 		sv.Serve(l)
 	}()
 

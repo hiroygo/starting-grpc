@@ -46,6 +46,9 @@ type BakerHandler struct {
 	counter *bakedCounter
 }
 
+// インタフェースが実装できていることをコンパイル時に確認する
+var _ api.PancakeBakerServiceServer = &BakerHandler{}
+
 func NewBakerHandler() *BakerHandler {
 	return &BakerHandler{&bakedCounter{counts: make(map[api.Pancake_Menu]int)}}
 }
