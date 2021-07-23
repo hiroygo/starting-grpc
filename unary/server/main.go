@@ -8,8 +8,8 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/hiroygo/starting-grpc/api"
-	"github.com/hiroygo/starting-grpc/server/handler"
+	"github.com/hiroygo/starting-grpc/unary/api"
+	"github.com/hiroygo/starting-grpc/unary/server/handler"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/reflection"

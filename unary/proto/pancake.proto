@@ -1,7 +1,7 @@
 syntax = "proto3";
 package pancake.baker;
 
-option go_package = "github.com/hiroygo/starting-grpc/api";
+option go_package = "github.com/hiroygo/starting-grpc/unary/api";
 
 import "google/protobuf/timestamp.proto";
 

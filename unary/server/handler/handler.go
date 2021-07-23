@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/ptypes/timestamp"
-	"github.com/hiroygo/starting-grpc/api"
+	"github.com/hiroygo/starting-grpc/unary/api"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

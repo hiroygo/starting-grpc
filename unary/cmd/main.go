@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/hiroygo/starting-grpc/api"
+	"github.com/hiroygo/starting-grpc/unary/api"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 )
