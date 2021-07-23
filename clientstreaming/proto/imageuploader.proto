@@ -1,0 +1,27 @@
+syntax = "proto3";
+package imageuploader;
+
+option go_package = "github.com/hiroygo/starting-grpc/clientstreaming/api";
+
+service ImageUploaderService {
+    rpc Upload(stream ImageUploadRequest) returns (ImageUploadResponse) {}
+}
+
+message ImageUploadRequest {
+    // file フィールドは FileMeta か bytes のどちらかを保持する
+    oneof file {
+        FileMeta file_meta = 1;
+        bytes data = 2;
+    }
+
+    message FileMeta {
+        string filename = 1;
+    }
+}
+
+message ImageUploadResponse {
+    string uuid = 1;
+    int32 size = 2;
+    string countent_type = 3;
+    string filename = 4;
+}
