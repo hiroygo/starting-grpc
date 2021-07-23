@@ -1,6 +1,8 @@
 package main
 
 import (
+	"context"
+	"fmt"
 	"log"
 	"net"
 	"os"
@@ -9,22 +11,32 @@ import (
 	"github.com/hiroygo/starting-grpc/api"
 	"github.com/hiroygo/starting-grpc/server/handler"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/reflection"
 
+	grpc_middleware "github.com/grpc-ecosystem/go-grpc-middleware"
+	grpc_auth "github.com/grpc-ecosystem/go-grpc-middleware/auth"
 	grpc_zap "github.com/grpc-ecosystem/go-grpc-middleware/logging/zap"
 	"go.uber.org/zap"
 )
 
-func main() {
-	addr := ":50051"
-	l, err := net.Listen("tcp", addr)
+func newServer() (*grpc.Server, error) {
+	logger, err := zap.NewProduction()
 	if err != nil {
-		log.Fatalf("Listen error: %s", err)
+		return nil, fmt.Errorf("NewProduction error: %w", err)
 	}
 
-	zapLogger, err := zap.NewProduction()
-	if err != nil {
-		log.Fatalf("NewProduction error: %s", err)
+	// 認証用処理
+	auth := func(ctx context.Context) (context.Context, error) {
+		// MD = metadata
+		token, err := grpc_auth.AuthFromMD(ctx, "bearer")
+		if err != nil {
+			return nil, fmt.Errorf("AuthFromMD error: %w", err)
+		}
+		if token != "secret" {
+			return nil, grpc.Errorf(codes.Unauthenticated, "invalid bearer token")
+		}
+		return ctx, nil
 	}
 
 	// ReplaceGrpcLogger だけでもロギングは動作する
@@ -37,11 +49,31 @@ func main() {
 	//  "system": "grpc",
 	//  "grpc_log": true
 	//}
-	grpc_zap.ReplaceGrpcLogger(zapLogger)
-
+	grpc_zap.ReplaceGrpcLogger(logger)
 	sv := grpc.NewServer(
-		grpc.UnaryInterceptor(grpc_zap.UnaryServerInterceptor(zapLogger)),
+		grpc.UnaryInterceptor(
+			// ChainUnaryServer(one, two, three) は one, two, three の順で実行されていく
+			grpc_middleware.ChainUnaryServer(
+				grpc_zap.UnaryServerInterceptor(logger),
+				grpc_auth.UnaryServerInterceptor(auth),
+			),
+		),
 	)
+	return sv, nil
+}
+
+func main() {
+	addr := ":50051"
+	l, err := net.Listen("tcp", addr)
+	if err != nil {
+		log.Fatalf("Listen error: %s", err)
+	}
+
+	sv, err := newServer()
+	if err != nil {
+		log.Fatalf("newServer error: %s", err)
+	}
+
 	// gRPC サーバとハンドラを対応させる
 	api.RegisterPancakeBakerServiceServer(sv, handler.NewBakerHandler())
 	// grpc_cli を使う時に必要

@@ -8,11 +8,17 @@ import (
 
 	"github.com/hiroygo/starting-grpc/api"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/metadata"
 )
+
+func contextWithBearer() context.Context {
+	md := metadata.Pairs("authorization", "bearer secret")
+	return metadata.NewOutgoingContext(context.Background(), md)
+}
 
 func bake(c api.PancakeBakerServiceClient, m api.Pancake_Menu) (*api.BakeResponse, error) {
 	req := &api.BakeRequest{Menu: m}
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+	ctx, cancel := context.WithTimeout(contextWithBearer(), time.Second)
 	defer cancel()
 
 	resp, err := c.Bake(ctx, req)
@@ -25,7 +31,7 @@ func bake(c api.PancakeBakerServiceClient, m api.Pancake_Menu) (*api.BakeRespons
 
 func report(c api.PancakeBakerServiceClient) (*api.ReportResponse, error) {
 	req := &api.ReportRequest{}
-	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+	ctx, cancel := context.WithTimeout(contextWithBearer(), time.Second)
 	defer cancel()
 
 	resp, err := c.Report(ctx, req)
