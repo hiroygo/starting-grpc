@@ -247,18 +247,18 @@ var file_imageuploader_proto_rawDesc = []byte{
 	0x6f, 0x75, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x18, 0x03, 0x20, 0x01,
 	0x28, 0x09, 0x52, 0x0c, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x54, 0x79, 0x70, 0x65,
 	0x12, 0x1a, 0x0a, 0x08, 0x66, 0x69, 0x6c, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x08, 0x66, 0x69, 0x6c, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x32, 0x6b, 0x0a, 0x14,
-	0x49, 0x6d, 0x61, 0x67, 0x65, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x65, 0x72, 0x53, 0x65, 0x72,
-	0x76, 0x69, 0x63, 0x65, 0x12, 0x53, 0x0a, 0x06, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x12, 0x21,
-	0x2e, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x75, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x65, 0x72, 0x2e, 0x49,
-	0x6d, 0x61, 0x67, 0x65, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
-	0x74, 0x1a, 0x22, 0x2e, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x75, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x65,
-	0x72, 0x2e, 0x49, 0x6d, 0x61, 0x67, 0x65, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x52, 0x65, 0x73,
-	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00, 0x28, 0x01, 0x42, 0x36, 0x5a, 0x34, 0x67, 0x69, 0x74,
-	0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x68, 0x69, 0x72, 0x6f, 0x79, 0x67, 0x6f, 0x2f,
-	0x73, 0x74, 0x61, 0x72, 0x74, 0x69, 0x6e, 0x67, 0x2d, 0x67, 0x72, 0x70, 0x63, 0x2f, 0x63, 0x6c,
-	0x69, 0x65, 0x6e, 0x74, 0x73, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x69, 0x6e, 0x67, 0x2f, 0x61, 0x70,
-	0x69, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x28, 0x09, 0x52, 0x08, 0x66, 0x69, 0x6c, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x32, 0x69, 0x0a, 0x12,
+	0x49, 0x6d, 0x61, 0x67, 0x65, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x53, 0x65, 0x72, 0x76, 0x69,
+	0x63, 0x65, 0x12, 0x53, 0x0a, 0x06, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x12, 0x21, 0x2e, 0x69,
+	0x6d, 0x61, 0x67, 0x65, 0x75, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x65, 0x72, 0x2e, 0x49, 0x6d, 0x61,
+	0x67, 0x65, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a,
+	0x22, 0x2e, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x75, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x65, 0x72, 0x2e,
+	0x49, 0x6d, 0x61, 0x67, 0x65, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x52, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x22, 0x00, 0x28, 0x01, 0x42, 0x36, 0x5a, 0x34, 0x67, 0x69, 0x74, 0x68, 0x75,
+	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x68, 0x69, 0x72, 0x6f, 0x79, 0x67, 0x6f, 0x2f, 0x73, 0x74,
+	0x61, 0x72, 0x74, 0x69, 0x6e, 0x67, 0x2d, 0x67, 0x72, 0x70, 0x63, 0x2f, 0x63, 0x6c, 0x69, 0x65,
+	0x6e, 0x74, 0x73, 0x74, 0x72, 0x65, 0x61, 0x6d, 0x69, 0x6e, 0x67, 0x2f, 0x61, 0x70, 0x69, 0x62,
+	0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -281,8 +281,8 @@ var file_imageuploader_proto_goTypes = []interface{}{
 }
 var file_imageuploader_proto_depIdxs = []int32{
 	2, // 0: imageuploader.ImageUploadRequest.file_meta:type_name -> imageuploader.ImageUploadRequest.FileMeta
-	0, // 1: imageuploader.ImageUploaderService.Upload:input_type -> imageuploader.ImageUploadRequest
-	1, // 2: imageuploader.ImageUploaderService.Upload:output_type -> imageuploader.ImageUploadResponse
+	0, // 1: imageuploader.ImageUploadService.Upload:input_type -> imageuploader.ImageUploadRequest
+	1, // 2: imageuploader.ImageUploadService.Upload:output_type -> imageuploader.ImageUploadResponse
 	2, // [2:3] is the sub-list for method output_type
 	1, // [1:2] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
@@ -365,45 +365,45 @@ var _ grpc.ClientConnInterface
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion6
 
-// ImageUploaderServiceClient is the client API for ImageUploaderService service.
+// ImageUploadServiceClient is the client API for ImageUploadService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type ImageUploaderServiceClient interface {
-	Upload(ctx context.Context, opts ...grpc.CallOption) (ImageUploaderService_UploadClient, error)
+type ImageUploadServiceClient interface {
+	Upload(ctx context.Context, opts ...grpc.CallOption) (ImageUploadService_UploadClient, error)
 }
 
-type imageUploaderServiceClient struct {
+type imageUploadServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewImageUploaderServiceClient(cc grpc.ClientConnInterface) ImageUploaderServiceClient {
-	return &imageUploaderServiceClient{cc}
+func NewImageUploadServiceClient(cc grpc.ClientConnInterface) ImageUploadServiceClient {
+	return &imageUploadServiceClient{cc}
 }
 
-func (c *imageUploaderServiceClient) Upload(ctx context.Context, opts ...grpc.CallOption) (ImageUploaderService_UploadClient, error) {
-	stream, err := c.cc.NewStream(ctx, &_ImageUploaderService_serviceDesc.Streams[0], "/imageuploader.ImageUploaderService/Upload", opts...)
+func (c *imageUploadServiceClient) Upload(ctx context.Context, opts ...grpc.CallOption) (ImageUploadService_UploadClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_ImageUploadService_serviceDesc.Streams[0], "/imageuploader.ImageUploadService/Upload", opts...)
 	if err != nil {
 		return nil, err
 	}
-	x := &imageUploaderServiceUploadClient{stream}
+	x := &imageUploadServiceUploadClient{stream}
 	return x, nil
 }
 
-type ImageUploaderService_UploadClient interface {
+type ImageUploadService_UploadClient interface {
 	Send(*ImageUploadRequest) error
 	CloseAndRecv() (*ImageUploadResponse, error)
 	grpc.ClientStream
 }
 
-type imageUploaderServiceUploadClient struct {
+type imageUploadServiceUploadClient struct {
 	grpc.ClientStream
 }
 
-func (x *imageUploaderServiceUploadClient) Send(m *ImageUploadRequest) error {
+func (x *imageUploadServiceUploadClient) Send(m *ImageUploadRequest) error {
 	return x.ClientStream.SendMsg(m)
 }
 
-func (x *imageUploaderServiceUploadClient) CloseAndRecv() (*ImageUploadResponse, error) {
+func (x *imageUploadServiceUploadClient) CloseAndRecv() (*ImageUploadResponse, error) {
 	if err := x.ClientStream.CloseSend(); err != nil {
 		return nil, err
 	}
@@ -414,42 +414,42 @@ func (x *imageUploaderServiceUploadClient) CloseAndRecv() (*ImageUploadResponse,
 	return m, nil
 }
 
-// ImageUploaderServiceServer is the server API for ImageUploaderService service.
-type ImageUploaderServiceServer interface {
-	Upload(ImageUploaderService_UploadServer) error
+// ImageUploadServiceServer is the server API for ImageUploadService service.
+type ImageUploadServiceServer interface {
+	Upload(ImageUploadService_UploadServer) error
 }
 
-// UnimplementedImageUploaderServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedImageUploaderServiceServer struct {
+// UnimplementedImageUploadServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedImageUploadServiceServer struct {
 }
 
-func (*UnimplementedImageUploaderServiceServer) Upload(ImageUploaderService_UploadServer) error {
+func (*UnimplementedImageUploadServiceServer) Upload(ImageUploadService_UploadServer) error {
 	return status.Errorf(codes.Unimplemented, "method Upload not implemented")
 }
 
-func RegisterImageUploaderServiceServer(s *grpc.Server, srv ImageUploaderServiceServer) {
-	s.RegisterService(&_ImageUploaderService_serviceDesc, srv)
+func RegisterImageUploadServiceServer(s *grpc.Server, srv ImageUploadServiceServer) {
+	s.RegisterService(&_ImageUploadService_serviceDesc, srv)
 }
 
-func _ImageUploaderService_Upload_Handler(srv interface{}, stream grpc.ServerStream) error {
-	return srv.(ImageUploaderServiceServer).Upload(&imageUploaderServiceUploadServer{stream})
+func _ImageUploadService_Upload_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(ImageUploadServiceServer).Upload(&imageUploadServiceUploadServer{stream})
 }
 
-type ImageUploaderService_UploadServer interface {
+type ImageUploadService_UploadServer interface {
 	SendAndClose(*ImageUploadResponse) error
 	Recv() (*ImageUploadRequest, error)
 	grpc.ServerStream
 }
 
-type imageUploaderServiceUploadServer struct {
+type imageUploadServiceUploadServer struct {
 	grpc.ServerStream
 }
 
-func (x *imageUploaderServiceUploadServer) SendAndClose(m *ImageUploadResponse) error {
+func (x *imageUploadServiceUploadServer) SendAndClose(m *ImageUploadResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 
-func (x *imageUploaderServiceUploadServer) Recv() (*ImageUploadRequest, error) {
+func (x *imageUploadServiceUploadServer) Recv() (*ImageUploadRequest, error) {
 	m := new(ImageUploadRequest)
 	if err := x.ServerStream.RecvMsg(m); err != nil {
 		return nil, err
@@ -457,14 +457,14 @@ func (x *imageUploaderServiceUploadServer) Recv() (*ImageUploadRequest, error) {
 	return m, nil
 }
 
-var _ImageUploaderService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "imageuploader.ImageUploaderService",
-	HandlerType: (*ImageUploaderServiceServer)(nil),
+var _ImageUploadService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "imageuploader.ImageUploadService",
+	HandlerType: (*ImageUploadServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
 		{
 			StreamName:    "Upload",
-			Handler:       _ImageUploaderService_Upload_Handler,
+			Handler:       _ImageUploadService_Upload_Handler,
 			ClientStreams: true,
 		},
 	},

@@ -3,7 +3,7 @@ package imageuploader;
 
 option go_package = "github.com/hiroygo/starting-grpc/clientstreaming/api";
 
-service ImageUploaderService {
+service ImageUploadService {
     rpc Upload(stream ImageUploadRequest) returns (ImageUploadResponse) {}
 }
 
