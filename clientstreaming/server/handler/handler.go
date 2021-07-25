@@ -5,10 +5,11 @@ import (
 	"errors"
 	"fmt"
 	"io"
+	"log"
 	"net/http"
 	"sync"
 
-    "github.com/google/uuid"
+	"github.com/google/uuid"
 	"github.com/hiroygo/starting-grpc/clientstreaming/api"
 )
 
@@ -85,6 +86,7 @@ func (i *ImageUploadHandler) Upload(stream api.ImageUploadService_UploadServer) 
 		return fmt.Errorf("recvImage error: %w", err)
 	}
 	i.files[filename] = image
+	log.Printf("recv file: %v, %v\n", filename, len(image))
 
 	// 返信
 	err = sendResponse(filename, image)
