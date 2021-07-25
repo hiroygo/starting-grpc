@@ -10,6 +10,12 @@ $ sudo apt install -y protobuf-compiler
 $ go get -u github.com/golang/protobuf/protoc-gen-go
 ```
 
+## HTML の生成
+```
+$ go get -u github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc
+$ protoc -Iproto --doc_out=. --doc_opt=html,index.html proto/*.proto
+```
+
 ## grpc_cli のビルド
 ```
 $ git clone https://github.com/grpc/grpc
