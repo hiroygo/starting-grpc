@@ -1,0 +1,9 @@
+syntax = "proto3";
+package dog;
+
+option go_package = "github.com/hiroygo/starting-grpc/protocol-buffers/main";
+
+message Dog {
+    string name = 1;
+    int32 age = 2;
+}
