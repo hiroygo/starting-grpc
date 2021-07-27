@@ -7,7 +7,8 @@ https://github.com/gami/grpc_example
 ## protoc のインストール
 ```
 $ sudo apt install -y protobuf-compiler
-$ go get -u github.com/golang/protobuf/protoc-gen-go
+$ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26
+$ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
 ```
 
 ## HTML の生成
